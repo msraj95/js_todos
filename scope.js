@@ -111,7 +111,6 @@ func();
 // Hoisting of let
 // Variables declared with the let keyword are not subject to hoisting. This means you cannot use a variable unless it is declared and initialized.
 
-// Read: How to Optimize Your Website Performance
 
 // The const Keyword in JavaScript
 // The const keyword follows the same rules as the let keyword. The only difference with const is that const is used to define only constant values in JavaScript programs.
@@ -120,10 +119,10 @@ const myVar = 1000;
  
 myVar = 2.5;// Uncaught TypeError: Assignment to constant variable.
 
-const Declarations are Block Scoped
-The scoping principles of const are the same as that of the let keyword. Like let, the variables declared with the const keyword will also have scope restricted to the block in which they are declared.
+// const Declarations are Block Scoped
+// The scoping principles of const are the same as that of the let keyword. Like let, the variables declared with the const keyword will also have scope restricted to the block in which they are declared.
 
-Some important pointers for const include:
+// Some important pointers for const include:
 
-const declares a variable with a constant value.
-Use the const keyword if the variable that you are declaring should not be allowed to be reassigned in the future.
+// const declares a variable with a constant value.
+// Use the const keyword if the variable that you are declaring should not be allowed to be reassigned in the future.

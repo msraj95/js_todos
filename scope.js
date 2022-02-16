@@ -65,13 +65,15 @@ for(x = 0; x < array.length; x++){  //index has a global scope
 // In the above code snippet, the JavaScript for loop will create variable x in the global scope. If you would 
 // create a new variable with the same name x and use it somewhere else in the program, then that new variable’s value will get overwritten.
 
-Read: Rounding in JavaScript
 
-The let Keyword in JavaScript
-let is the improved version of var. let eliminates all the issues of var that we have talked about in the previous section. let has a similar syntax to var but has a more strict scope.
+//  The let Keyword in JavaScript
+// let is the improved version of var. let eliminates all the issues of var that we have talked about in the previous section. 
+// let has a similar syntax to var but has a more strict scope.
 
-let is Block Scoped
-The let keyword should be used in situations where you want to declare a variable that should be restricted to the block in which it is restricted. Also, variables declared with the let keyword cannot be updated or re-declared. Here is an example of how to use let to declare variables in JavaScript:
+// let is Block Scoped
+// The let keyword should be used in situations where you want to declare a variable that should be restricted to the block in which it is restricted.
+// Also, variables declared with the let keyword cannot be updated or re-declared.
+// Here is an example of how to use let to declare variables in JavaScript: 
 
 function func() 
 {
@@ -89,9 +91,9 @@ function func()
     console.log(y); // ’undefined'
 }
  
- 
 func();
-Note that the variable y declared with the let keyword is not accessible beyond the if block in which it is declared. If we would have declared it with the var keyword, then it would have been available, because var has global scope within a function. The following code snippet will help you to better understand this train of thought:
+
+// Note that the variable y declared with the let keyword is not accessible beyond the if block in which it is declared. If we would have declared it with the var keyword, then it would have been available, because var has global scope within a function. The following code snippet will help you to better understand this train of thought:
 
 function func() 
 {
@@ -103,19 +105,21 @@ function func()
 }
  
 func();
-Another thing to consider is that let cannot be used before its declaration. If you do so, it will result in a ReferenceError.
 
-Hoisting of let
-Variables declared with the let keyword are not subject to hoisting. This means you cannot use a variable unless it is declared and initialized.
+// Another thing to consider is that let cannot be used before its declaration. If you do so, it will result in a ReferenceError.
 
-Read: How to Optimize Your Website Performance
+// Hoisting of let
+// Variables declared with the let keyword are not subject to hoisting. This means you cannot use a variable unless it is declared and initialized.
 
-The const Keyword in JavaScript
-The const keyword follows the same rules as the let keyword. The only difference with const is that const is used to define only constant values in JavaScript programs.
+// Read: How to Optimize Your Website Performance
+
+// The const Keyword in JavaScript
+// The const keyword follows the same rules as the let keyword. The only difference with const is that const is used to define only constant values in JavaScript programs.
 
 const myVar = 1000;
  
 myVar = 2.5;// Uncaught TypeError: Assignment to constant variable.
+
 const Declarations are Block Scoped
 The scoping principles of const are the same as that of the let keyword. Like let, the variables declared with the const keyword will also have scope restricted to the block in which they are declared.
 

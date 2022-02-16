@@ -1,21 +1,25 @@
-var, let, and const Variable Declaration in JavaScript
-The differences between var, let, and const variable declaration in JavaScript include:
-Variables declared with var and const are scoped to the immediate function body.
-Variables declared with the var keyword are hoisted. Hoisting means that the variable can be accessed in their enclosing scope even before they are declared.
-Variables declared with the let keyword are block-scoped, which means the variables will have scope to the immediate enclosing block.
+// var, let, and const Variable Declaration in JavaScript
+// The differences between var, let, and const variable declaration in JavaScript include:
+// Variables declared with var and const are scoped to the immediate function body.
+// Variables declared with the var keyword are hoisted. Hoisting means that the variable can be accessed in their enclosing scope even before they are declared.
+// Variables declared with the let keyword are block-scoped, which means the variables will have scope to the immediate enclosing block.
 
-Let us now discuss, in detail, how these keywords can make a developer’s code more efficient and how to use each keyword to declare variables in JavaScript programs.
+// Let us now discuss, in detail, how these keywords can make a developer’s code more efficient and how to use each keyword to declare variables in JavaScript programs.
 
-How to Use the var Keyword in JavaScript
-The var keyword has traditional variable declaration syntax. It is optional to initialize a variable with a value if it is declared with the var keyword. If developers do not initialize it with a value, JavaScript will automatically assign undefined to it, as shown in the following code snippet:
+// How to Use the var Keyword in JavaScript
+// The var keyword has traditional variable declaration syntax. It is optional to initialize a variable
+// with a value if it is declared with the var keyword. If developers do not initialize it with a value, 
+// JavaScript will automatically assign undefined to it, as shown in the following code snippet:
 
 var i;  // i is 'undefined'
  
 var j = ‘JavaScript’; //initialized with string
  
 
-var is Function Scoped
-Variables that are declared with var keyword have function scope. Function scoped here means that they can be accessed only inside the function in which they are declared, as showcased in the following JavaScript code example:
+// var is Function Scoped
+// Variables that are declared with var keyword have function scope. 
+// Function scoped here means that they can be accessed only inside the function in which they are declared, 
+//  as showcased in the following JavaScript code example:
 
 function func() 
 {
@@ -35,23 +39,31 @@ func();
  
 console.log(x); //undefined. Not available outside function
 console.log(y); //undefined. Not available outside function
-Hoisting of var in JavaScript
-Variables declared with the var keyword are subject to hoisting. If we declare a variable (but do not initialize it) at the end of the function, the JavaScript runtime will move it to the top of its scope and, therefore, there will be no complaint by the runtime if we use that variable before being declared.
 
-Issues with var for Variable Declaration
-One of the issues is that the variables declared with the var keyword can be re-declared or updated in the same scope. This could lead to a serious problem if we declare another variable with the same name in the same scope; the new value will replace the old one. Check out the following code-snippet for illustration:
+// #Hoisting of var in JavaScript
+// Variables declared with the var keyword are subject to hoisting. If we declare a variable (but do not initialize it) at the end of the function,
+// the JavaScript runtime will move it to the top of its scope and, therefore, 
+// there will be no complaint by the runtime if we use that variable before being declared.
+
+// Issues with var for Variable Declaration
+// One of the issues is that the variables declared with the var keyword can be re-declared or updated in the same scope. 
+// This could lead to a serious problem if we declare another variable with the same name in the same scope; 
+// the new value will replace the old one. Check out the following code-snippet for illustration:
 
 var color =”Red”;
 var color= “Green”;
 console.log(“color”); // output Green
 var color=”Blue”;
 console.log(color); // output Blue
-Another issue with the var keyword is that if you declare a variable without the keyword var, then that variable will have global scope. To get a better understanding, consider the following code:
+
+// Another issue with the var keyword is that if you declare a variable without the keyword var, then that variable will have global scope.
+// To get a better understanding, consider the following code:
 
 for(x = 0; x < array.length; x++){  //index has a global scope
    //code
 }
-In the above code snippet, the JavaScript for loop will create variable x in the global scope. If you would create a new variable with the same name x and use it somewhere else in the program, then that new variable’s value will get overwritten.
+// In the above code snippet, the JavaScript for loop will create variable x in the global scope. If you would 
+// create a new variable with the same name x and use it somewhere else in the program, then that new variable’s value will get overwritten.
 
 Read: Rounding in JavaScript
 
